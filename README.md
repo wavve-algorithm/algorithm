@@ -1,6 +1,6 @@
 # algorithm
 
-> 왕정현 @jojaeng2을 따라잡는 그날까지
+> 왕정현 [@jojaeng2](https://github.com/jojaeng2)을 따라잡는 그날까지
 
 
 ### 🙂 Collaborator
