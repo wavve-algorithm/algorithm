@@ -1,5 +1,32 @@
 # algorithm
 
+> 왕정현 @jojaeng2을 따라잡는 그날까지
+
+
+### 🙂 Collaborator
+
+<div>
+  <a href="https://github.com/essential2189">
+    <img src="https://avatars.githubusercontent.com/u/70889358?v=4" width="100" style="max-width: 100%;">
+  </a>
+  <a href="https://github.com/da-in">
+    <img src="https://avatars.githubusercontent.com/u/66757141?v=4" width="100" style="max-width: 100%;">
+  </a>
+  <a href="https://github.com/dahyeon405">
+    <img src="https://avatars.githubusercontent.com/u/109179856?v=4" width="100" style="max-width: 100%;">
+  </a>
+  <a href="https://github.com/JGeun">
+    <img src="https://avatars.githubusercontent.com/u/68798525?v=4" width="100" style="max-width: 100%;">
+  </a>
+  <a href="https://github.com/hyesuuou">
+    <img src="https://avatars.githubusercontent.com/u/68391767?v=4" width="100" style="max-width: 100%;">
+  </a>
+</div>
+
+<br/>
+
+### 📄 Markdown Template
+
 ```
 #### 풀이 1. 풀이 제목
 
