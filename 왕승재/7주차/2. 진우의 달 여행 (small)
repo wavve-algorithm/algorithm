@@ -1,0 +1,49 @@
+#### 2. 진우의 달 여행 (small)
+
+dp 너무너무 어려운것
+3개짜리 배열이 곧 어디서 왔는지에 대한 history이다. 그걸 기반으로 2번 연속 같은 방향으로 가지 않는다.
+
+```python
+N, M = map(int, input().split())
+
+board = [list(map(int, input().split())) for _ in range(N)]
+
+INF = float("inf")
+dp = [[[float("inf")] * 3 for _ in range(M)] for _ in range(N)]
+
+for x in range(M):
+    for i in range(3):
+        dp[0][x][i] = board[0][x]
+
+for y in range(1, N):
+    for x in range(M):
+        # x 맨 왼쪽일 땐 왼쪽으로 이동 불가
+        if x == 0:
+            # 오른쪽 아래 이동
+            dp[y][x][0] = min(dp[y-1][x+1][1], dp[y-1][x+1][2]) + board[y][x]
+            # 중간 아래 이동
+            dp[y][x][1] = dp[y-1][x][0] + board[y][x]
+
+        # x가 맨 오른쪽일 땐 오른쪽으로 이동 불가
+        elif x == M-1:
+            # 중간 아래 이동
+            dp[y][x][1] = dp[y-1][x][2] + board[y][x]
+            # 왼쪽 아래 이동
+            dp[y][x][2] = min(dp[y-1][x-1][0], dp[y-1][x-1][1]) + board[y][x]
+        # 중간에 있을 땐 어디든 이동 가능
+        else:
+            # 오른쪽 아래 이동
+            dp[y][x][0] = min(dp[y-1][x+1][1], dp[y-1][x+1][2]) + board[y][x]
+            # 중간 아래 이동
+            dp[y][x][1] = min(dp[y-1][x][0], dp[y-1][x][2]) + board[y][x]
+            # 왼쪽 아래 이동
+            dp[y][x][2] = min(dp[y-1][x-1][0], dp[y-1][x-1][1]) + board[y][x]
+            
+answer = float("inf")
+for x in range(M):
+    answer = min(min(dp[N-1][x]), answer)
+
+print(dp)
+    
+print(answer)
+```
