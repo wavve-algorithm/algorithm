@@ -1,0 +1,37 @@
+## 문제
+
+[2217번: 로프](https://www.acmicpc.net/problem/2217)
+
+## idea
+
+
+하중 큰거부터 정렬한 다음에 작은거 * 몇번째인지를 해서 가장 크면됨
+
+만약 15, 10, 7이 있으면
+
+1) 15만 쓸때 = 15
+
+2) 15, 10을 쓸 때 = 10*2
+
+3) 7만 쓸 때 = 7* 3
+
+여기서 가장큰건 21이니까 21이됨
+
+
+```swift
+let n = Int(readLine()!)!
+var data = [Int]()
+var answer = 0
+
+for _ in 0..<n {
+    data.append(Int(readLine()!)!)
+}
+
+data.sort(by: { $0 > $1 })
+
+for i in 0..<n {
+    answer = max(answer, data[i]*(i+1))
+}
+
+print(answer)
+```
